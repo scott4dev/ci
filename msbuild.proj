@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="3.5"
-         DefaultTargets="main"
+         DefaultTargets="compile"
          xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 		 
   <Target Name="main">
     <Message Text="It's working!!"></Message>
   </Target>
+
+  <Target Name="compile">
+    <MSBuild
+      Projects="$(MSBuildProjectDirectoty)src\Sample\Sample.sln" >
+    </MSBuild>
+  </Target>
+  
 </Project>
